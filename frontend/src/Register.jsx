@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Register.css'
 
 function Register({ onNavigate, onRegisterSuccess }) {
   const [username, setUsername] = useState('')
@@ -16,14 +17,13 @@ function Register({ onNavigate, onRegisterSuccess }) {
           username: username,
           email: email,
           password: password,
-          
         })
       })
 
       const data = await response.json()
 
       if (response.ok && data.status === "success") {
-        alert(data.mesaj || "Account created successfully! ")
+        alert(data.mesaj || "Account created successfully!")
 
         const loggedInUser = {
           id: data.user_id,
@@ -41,40 +41,64 @@ function Register({ onNavigate, onRegisterSuccess }) {
   }
 
   return (
-    <div className="bg-white/95 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-2xl w-full max-w-lg border border-purple-100/20 text-left">
-      <h2 className="text-purple-950 text-4xl font-black tracking-tight text-center mb-2">Creează un cont </h2>
-      <p className="text-gray-500 text-sm text-center mb-6">Create an account</p>
+    <div className="register-container">
+      <div className="card-register">
+        <h2 className="register-title">CREATE AN ACCOUNT</h2>
+        <p className="register-subtitle">Start organizing your tasks today</p>
 
-      <form onSubmit={handleRegister} className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <form onSubmit={handleRegister} className="register-form">
           <div>
-            <label className="block text-xs font-bold text-purple-950 uppercase tracking-wider mb-1 ml-1">Nume Complet</label>
-            <input type="text" required value={username} onChange={(e) => setUsername(e.target.value)} className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 transition text-sm" placeholder="Andrei Ionescu" />
+            <label className="form-label">Full Name</label>
+            <input 
+              type="text" 
+              required 
+              value={username} 
+              onChange={(e) => setUsername(e.target.value)} 
+              className="form-input" 
+              placeholder="Andrei Ionescu" 
+            />
           </div>
+
           <div>
-            <label className="block text-xs font-bold text-purple-950 uppercase tracking-wider mb-1 ml-1">Email</label>
-            <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 transition text-sm" placeholder="andrei@email.com" />
+            <label className="form-label">E-mail Address</label>
+            <input 
+              type="email" 
+              required 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+              className="form-input" 
+              placeholder="adress@email.com" 
+            />
           </div>
+
+          <div>
+            <label className="form-label">Password</label>
+            <input 
+              type="password" 
+              required 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+              className="form-input" 
+              placeholder="••••••••" 
+            />
+          </div>
+
+          <button type="submit" className="register-btn">
+            Create account 
+          </button>
+        </form>
+
+        <div className="login-redirect-container">
+          <span>Already have an account?</span>
+          <button 
+            type="button" 
+            onClick={() => onNavigate('login')} 
+            className="login-redirect-btn"
+          >
+            Login
+          </button>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-xs font-bold text-purple-950 uppercase tracking-wider mb-1 ml-1">Parolă</label>
-            <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} className="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 transition text-sm" placeholder="••••••••" />
-          </div>
-        </div>
-
-        <button type="submit" className="save-button">
-          Create account 
-        </button>
-      </form>
-
-      <p className="text-center text-sm text-gray-500 mt-6">
-        Already have an account?{' '}
-        <button onClick={() => onNavigate('login')} className="text-purple-900 font-bold hover:underline bg-transparent border-none cursor-pointer">
-          Login
-        </button>
-      </p>
+      </div>
     </div>
   )
 }
