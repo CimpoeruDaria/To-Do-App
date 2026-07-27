@@ -1,0 +1,216 @@
+/* Containerul full page care ocupă tot ecranul */
+.full-mainpage-container {
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header-ul de sus desfășurat */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+/* Titlul din stânga sus */
+.welcome-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-sub {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #8d6e63;
+  font-weight: 700;
+}
+
+.welcome-username {
+  font-size: 2.5rem;
+  color: #3e2723;
+  margin: 0.2rem 0 0 0;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.logout-top-btn {
+  background: #efebe9;
+  border: 1px solid #d7ccc8;
+  color: #5d4037;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-top-btn:hover {
+  background: #d7ccc8;
+  color: #3e2723;
+}
+
+/* Zona centrală (Centrată pe orizontală) */
+.center-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.tasks-wrapper {
+  width: 100%;
+  max-width: 800px; /* Poți mări dacă vrei să fie mai lată zona centrală */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Formularul de adăugare */
+.add-task-bar {
+  display: flex;
+  gap: 0.75rem;
+  background-color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid #e0d7c6;
+  box-shadow: 0 4px 15px rgba(60, 40, 20, 0.05);
+}
+
+.task-input-field {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  color: #3e2723;
+  outline: none;
+}
+
+.task-date-picker {
+  border: 1px solid #d7ccc8;
+  background: #fff8f0;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  color: #5d4037;
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.task-add-btn {
+  background-color: #5d4037;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.task-add-btn:hover {
+  background-color: #3e2723;
+}
+
+/* Secțiunea listei */
+.list-title {
+  font-size: 1.2rem;
+  color: #5d4037;
+  margin-bottom: 1rem;
+  border-bottom: 2px dashed #e0d7c6;
+  padding-bottom: 0.5rem;
+}
+
+.status-msg {
+  color: #a1887f;
+  font-style: italic;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.full-task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.full-task-item {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #efebe9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+.full-task-item:hover {
+  border-color: #d7ccc8;
+}
+
+.full-task-item.completed {
+  opacity: 0.6;
+  background: #f5f2eb;
+}
+
+.full-task-item.completed .task-text-body {
+  text-decoration: line-through;
+  color: #8d6e63;
+}
+
+.checkbox-box input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #5d4037;
+}
+
+.task-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 1.2rem;
+  gap: 0.2rem;
+}
+
+.task-text-body {
+  font-size: 1.05rem;
+  color: #3e2723;
+  word-break: break-word;
+}
+
+.task-date-tag {
+  font-size: 0.8rem;
+  color: #8d6e63;
+  font-weight: 600;
+}
+
+.task-no-date {
+  font-size: 0.8rem;
+  color: #b0bec5;
+  font-style: italic;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #cfd8dc;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #e53935;
+}
