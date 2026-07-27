@@ -55,7 +55,7 @@ function Register({ onNavigate, onRegisterSuccess }) {
               value={username} 
               onChange={(e) => setUsername(e.target.value)} 
               className="form-input" 
-              placeholder="Andrei Ionescu" 
+              placeholder="Walter White" 
             />
           </div>
 
