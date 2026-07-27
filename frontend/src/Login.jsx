@@ -25,11 +25,11 @@ function Login({ onNavigate, onLoginSuccess }) {
         }
         onLoginSuccess(loggedInUser) 
       } else {
-        alert(data.detail || "Email sau parolă incorectă!")
+        alert(data.detail || "Wrong e-mail or password!")
       }
     } catch (error) {
       console.error(error)
-      alert("Nu s-a putut conecta la serverul Python!")
+      alert("Cannot connect to Python server!")
     }
   }
 
