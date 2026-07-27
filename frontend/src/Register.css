@@ -1,0 +1,126 @@
+/* Containerul principal */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Cardul principal crem/alb */
+.card-register {
+  background-color: #f9f7f0;
+  padding: 48px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titlul paginii de Register */
+.register-title {
+  color: #2b2d30;
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+.register-subtitle {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 1.75rem;
+}
+
+/* Formularul */
+.register-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Etichetele câmpurilor */
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #2b2d30;
+}
+
+/* Input-urile rotunjite */
+.form-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border: 1px solid #c5cbda;
+  border-radius: 12px;
+  outline: none;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333333;
+  transition: all 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: #9aa0ac;
+}
+
+.form-input:focus {
+  border-color: #4c566a;
+  box-shadow: 0 0 0 2px rgba(76, 86, 106, 0.15);
+}
+
+/* Butonul principal "CREATE ACCOUNT" */
+.register-btn {
+  width: 100%;
+  background-color: #4b5563;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.register-btn:hover {
+  background-color: #374151;
+}
+
+/* Zona "Already have an account?" de jos */
+.login-redirect-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.login-redirect-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #111827;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.85rem;
+}
+
+.login-redirect-btn:hover {
+  color: #000000;
+}
