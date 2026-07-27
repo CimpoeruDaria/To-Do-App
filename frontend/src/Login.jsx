@@ -21,9 +21,10 @@ function Login({ onNavigate, onLoginSuccess }) {
         const serverUser = data.user;
         const loggedInUser = {
           id: serverUser.id,
-          fullName: serverUser.name          
+          fullName: serverUser.username,  
+          email: serverUser.email       
         }
-        onLoginSuccess(loggedInUser) 
+        onLoginSuccess(data.user) 
       } else {
         alert(data.detail || "Wrong e-mail or password!")
       }
